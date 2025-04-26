@@ -1,0 +1,102 @@
+body {
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(45deg, #ff6f61, #ffc107);
+  color: #fff;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+nav {
+  background: #343a40;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  color: #f8f9fa;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffeb3b;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#about {
+  background: #ffe082;
+  color: #333;
+}
+
+#skills {
+  background: #80deea;
+  color: #333;
+}
+
+#certifications {
+  background: #ce93d8;
+  color: #333;
+}
+
+#projects {
+  background: #a5d6a7;
+  color: #333;
+}
+
+#experience {
+  background: #f48fb1;
+  color: #333;
+}
+
+#contact {
+  background: #ffcc80;
+  color: #333;
+}
+
+h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #343a40;
+  color: #f8f9fa;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #d84315;
+}
+
+a:hover {
+  color: #bf360c;
+}
