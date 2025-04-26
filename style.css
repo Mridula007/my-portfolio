@@ -1,76 +1,36 @@
 body {
-  background-color: #ffffff;
-  color: #333;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 header {
   text-align: center;
   padding: 40px;
-  background: linear-gradient(45deg, #ff6f61, #ffc107);
-  color: #fff;
-}
-
-header h1 {
-  font-size: 3em;
-  margin: 0;
+  background: linear-gradient(45deg, #ffd180, #ffab91);
+  color: #333;
 }
 
 nav {
-  background: #343a40;
+  background: #ffccbc;
   padding: 12px;
   text-align: center;
 }
 
 nav a {
-  color: #f8f9fa;
+  color: #333;
   text-decoration: none;
   margin: 0 20px;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #ffeb3b;
-}
-
 section {
-  padding: 40px 20px;
+  padding: 30px 20px;
   max-width: 800px;
   margin: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-#about {
-  background: #ffe082;
-  color: #333;
-}
-
-#skills {
-  background: #80deea;
-  color: #333;
-}
-
-#certifications {
-  background: #ce93d8;
-  color: #333;
-}
-
-#projects {
-  background: #a5d6a7;
-  color: #333;
-}
-
-#experience {
-  background: #f48fb1;
-  color: #333;
-}
-
-#contact {
-  background: #ffcc80;
-  color: #333;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 h2 {
@@ -78,25 +38,93 @@ h2 {
   padding-bottom: 5px;
 }
 
+.project-card {
+  background: #f8bbd0;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.view-btn {
+  background: #4db6ac;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #00897b;
+}
+
 footer {
   text-align: center;
   padding: 20px;
-  background: #343a40;
-  color: #f8f9fa;
+  background: #ffccbc;
+  color: #333;
+  margin-top: 30px;
 }
 
-ul {
-  padding-left: 20px;
+#mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 14px;
+  border: none;
+  background: #4db6ac;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-ul li {
-  margin-bottom: 10px;
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff8a65;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-a {
-  color: #d84315;
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
-a:hover {
-  color: #bf360c;
+body.dark-mode header {
+  background: #263238;
+  color: #f0f0f0;
+}
+
+body.dark-mode nav {
+  background: #37474f;
+}
+
+body.dark-mode footer {
+  background: #263238;
+}
+
+body.dark-mode .project-card {
+  background: #455a64;
+}
+
+body.dark-mode .view-btn {
+  background: #81c784;
+}
+
+body.dark-mode #mode-toggle {
+  background: #81c784;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
