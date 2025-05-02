@@ -3,6 +3,8 @@ body {
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
   transition: background-color 0.4s ease, color 0.4s ease;
+  background: #fff8f0;
+  color: #333;
 }
 
 header {
@@ -29,8 +31,6 @@ section {
   padding: 30px 20px;
   max-width: 800px;
   margin: auto;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
 }
 
 h2 {
@@ -43,6 +43,7 @@ h2 {
   padding: 20px;
   margin: 20px 0;
   border-radius: 12px;
+  box-shadow: 0 0 8px #ccc;
   transition: transform 0.3s ease;
 }
 
@@ -54,9 +55,12 @@ h2 {
   background: #4db6ac;
   border: none;
   color: white;
-  padding: 10px 16px;
+  padding: 10px 18px;
   border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .view-btn:hover {
@@ -123,8 +127,4 @@ body.dark-mode .view-btn {
 
 body.dark-mode #mode-toggle {
   background: #81c784;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
 }
