@@ -14,6 +14,16 @@ header {
   color: #333;
 }
 
+.profile-pic {
+  display: block;
+  margin: 0 auto 20px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 12px #ccc;
+}
+
 nav {
   background: #ffccbc;
   padding: 12px;
