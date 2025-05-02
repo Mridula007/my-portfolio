@@ -1,77 +1,132 @@
 /* Global Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fc;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  margin: 0;
   color: #333;
-  transition: background-color 0.5s ease;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #4e73df, #28a745);
-  color: white;
-  padding: 2rem;
+  background: linear-gradient(135deg, #4e73df, #20c997);
+  color: #fff;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
 header h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3.2rem;
+  margin: 0;
 }
 
-/* Section Titles */
-h2, h3 {
-  color: #4e73df;
+header p {
+  font-size: 1.3rem;
+  margin: 1rem 0;
 }
 
-/* Main Content */
-section {
-  padding: 3rem 2rem;
-  margin: 2rem 0;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-/* Button Styling */
-button {
-  background-color: #ffc107;
-  color: white;
+#darkToggle {
+  padding: 0.8rem 1.5rem;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.2rem;
+  background: #ffc107;
+  color: #333;
   border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
-button:hover {
-  background-color: #e83e8c;
-  transform: scale(1.05);
+#darkToggle:hover {
+  background: #e83e8c;
+  color: #fff;
 }
 
-button:active {
-  background-color: #d63384;
-  transform: scale(1);
+/* Sections */
+section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* Links */
-a {
-  color: #4e73df;
+h2 {
+  font-size: 2.5rem;
+  color: #20c997;
+  margin-bottom: 1.5rem;
+}
+
+/* Project Cards */
+.project-card {
+  background: #fff;
+  border-left: 5px solid #4e73df;
+  margin: 1.5rem 0;
+  padding: 1.3rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin: 0 0 0.7rem 0;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  background: #20c997;
+  color: #fff;
+  border-radius: 5px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  margin-top: 0.9rem;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-a:hover {
-  color: #28a745;
+.project-btn:hover {
+  background: #e83e8c;
+}
+
+/* Contact */
+#contact {
+  background: linear-gradient(135deg, #20c997, #4e73df);
+  color: #fff;
+  border-radius: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form input, form textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.1rem;
+}
+
+form button {
+  padding: 1rem;
+  background: #ffc107;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #e83e8c;
+  color: #fff;
 }
 
 /* Footer */
 footer {
-  background-color: #343a40;
-  color: white;
-  padding: 1rem;
+  background: #333;
+  color: #fff;
   text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
   opacity: 0;
   animation: fadeIn 2s forwards;
   animation-delay: 1s;
@@ -83,54 +138,41 @@ footer {
   }
 }
 
-/* Contact Section */
-#contact {
-  background: linear-gradient(135deg, #28a745, #ffc107);
-  padding: 4rem 2rem;
-  color: white;
-  border-radius: 8px;
+/* Dark Mode */
+body.dark {
+  background: #111;
+  color: #fff;
 }
 
-#contact h2 {
-  font-size: 2.5rem;
+body.dark header {
+  background: linear-gradient(135deg, #111, #333);
 }
 
-/* Form Styling */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+body.dark section {
+  background: #222;
 }
 
-form input, form textarea {
-  padding: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  outline: none;
-  transition: border 0.3s ease;
+body.dark .project-card {
+  background: #333;
+  border-color: #ffc107;
+  color: #eee;
 }
 
-form input:focus, form textarea:focus {
-  border-color: #4e73df;
+body.dark #contact {
+  background: linear-gradient(135deg, #333, #555);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
+body.dark form input, 
+body.dark form textarea {
+  background: #555;
+  color: #eee;
+}
 
-  section {
-    margin: 1rem;
-  }
+body.dark form button {
+  background: #ffc107;
+  color: #333;
+}
 
-  button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  form {
-    gap: 1rem;
-  }
+body.dark footer {
+  background: #111;
 }
