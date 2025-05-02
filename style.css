@@ -1,54 +1,15 @@
 /* Global Styles */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #e0f7fa, #f1f8e9); /* Light gradient */
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
   margin: 0;
-  color: #333; /* Light text color */
+  color: #333;
   transition: background 0.5s ease, color 0.5s ease;
-}
-
-/* Dark Mode */
-body.dark {
-  background: #111; /* Dark background */
-  color: #fff; /* Light text color */
-}
-
-body.dark header {
-  background: linear-gradient(135deg, #111, #333); /* Dark header gradient */
-}
-
-body.dark section {
-  background: #222; /* Dark section background */
-}
-
-body.dark .project-card {
-  background: #333; /* Dark card background */
-  border-color: #ffc107; /* Yellow border */
-  color: #eee; /* Light text in cards */
-}
-
-body.dark #contact {
-  background: linear-gradient(135deg, #333, #555); /* Dark contact section */
-}
-
-body.dark form input, 
-body.dark form textarea {
-  background: #555; /* Dark input and textarea */
-  color: #eee; /* Light text in inputs */
-}
-
-body.dark form button {
-  background: #ffc107; /* Yellow button */
-  color: #333; /* Dark text on button */
-}
-
-body.dark footer {
-  background: #111; /* Dark footer */
 }
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #4e73df, #20c997); /* Light header gradient */
+  background: linear-gradient(135deg, #4e73df, #20c997);
   color: #fff;
   padding: 3rem 1rem;
   text-align: center;
@@ -67,7 +28,7 @@ header p {
 #darkToggle {
   padding: 0.8rem 1.5rem;
   border: none;
-  background: #ffc107; /* Yellow button */
+  background: #ffc107;
   color: #333;
   border-radius: 5px;
   font-weight: bold;
@@ -76,7 +37,7 @@ header p {
 }
 
 #darkToggle:hover {
-  background: #e83e8c; /* Pink hover effect */
+  background: #e83e8c;
   color: #fff;
 }
 
@@ -89,14 +50,14 @@ section {
 
 h2 {
   font-size: 2.5rem;
-  color: #20c997; /* Green heading */
+  color: #20c997;
   margin-bottom: 1.5rem;
 }
 
 /* Project Cards */
 .project-card {
-  background: #fff; /* White background */
-  border-left: 5px solid #4e73df; /* Blue left border */
+  background: #fff;
+  border-left: 5px solid #4e73df;
   margin: 1.5rem 0;
   padding: 1.3rem;
   border-radius: 10px;
@@ -110,7 +71,7 @@ h2 {
 .project-btn {
   display: inline-block;
   padding: 0.8rem 1.4rem;
-  background: #20c997; /* Green button */
+  background: #20c997;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -120,12 +81,12 @@ h2 {
 }
 
 .project-btn:hover {
-  background: #e83e8c; /* Pink hover effect */
+  background: #e83e8c;
 }
 
 /* Contact */
 #contact {
-  background: linear-gradient(135deg, #20c997, #4e73df); /* Green to Blue gradient */
+  background: linear-gradient(135deg, #20c997, #4e73df);
   color: #fff;
   border-radius: 12px;
 }
@@ -145,7 +106,7 @@ form input, form textarea {
 
 form button {
   padding: 1rem;
-  background: #ffc107; /* Yellow button */
+  background: #ffc107;
   border: none;
   color: #333;
   font-weight: bold;
@@ -155,12 +116,13 @@ form button {
 }
 
 form button:hover {
-  background: #e83e8c; /* Pink hover effect */
+  background: #e83e8c;
+  color: #fff;
 }
 
 /* Footer */
 footer {
-  background: #333; /* Dark footer */
+  background: #333;
   color: #fff;
   text-align: center;
   padding: 1rem;
@@ -174,4 +136,43 @@ footer {
   to {
     opacity: 1;
   }
+}
+
+/* Dark Mode */
+body.dark {
+  background: #111;
+  color: #fff;
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #111, #333);
+}
+
+body.dark section {
+  background: #222;
+}
+
+body.dark .project-card {
+  background: #333;
+  border-color: #ffc107;
+  color: #eee;
+}
+
+body.dark #contact {
+  background: linear-gradient(135deg, #333, #555);
+}
+
+body.dark form input, 
+body.dark form textarea {
+  background: #555;
+  color: #eee;
+}
+
+body.dark form button {
+  background: #ffc107;
+  color: #333;
+}
+
+body.dark footer {
+  background: #111;
 }
