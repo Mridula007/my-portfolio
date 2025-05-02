@@ -12,7 +12,13 @@ header {
   padding: 50px;
   background: linear-gradient(45deg, #81ecec, #a29bfe);
   color: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tagline {
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #f9f9f9;
 }
 
 nav {
@@ -69,40 +75,6 @@ h2 {
   background: #0984e3;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: 30px auto;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 25px;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.contact-form input, .contact-form textarea {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.send-btn {
-  background: #fd79a8;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.send-btn:hover {
-  background: #e84393;
-}
-
 footer {
   text-align: center;
   padding: 20px;
@@ -149,7 +121,6 @@ body.dark-mode footer {
   background: #2d3436;
 }
 
-body.dark-mode .project-card,
-body.dark-mode .contact-form {
+body.dark-mode .project-card {
   background: rgba(40,40,40,0.6);
 }
