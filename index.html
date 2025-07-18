@@ -3,64 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mridula's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Mridula S | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Raleway:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
+  <button class="toggle-btn">☀️</button>
+
   <header>
-    <h1>Hi, I'm Mridula!</h1>
-    <p>A passionate Web Developer & YouTuber</p>
-    <button id="darkToggle">Toggle Dark Mode</button>
+    <nav class="navbar">
+      <div class="logo">Mridula S</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm Mridula S, a passionate BCA student and aspiring full-stack web developer who enjoys crafting colorful, modern, and user-friendly websites. My core skills include HTML, CSS, JavaScript, Python, and Angular. I'm also actively exploring SEO strategies to improve web visibility and performance.
-    </p>
-    <p>
-      I believe in continuous learning and sharing knowledge—check out my tutorials and project showcases on my 
-      <a href="https://www.youtube.com/@YourChannel" target="_blank">YouTube channel</a>. You can also connect with me professionally on 
-      <a href="https://www.linkedin.com/in/mridula-s-0a32562b0" target="_blank">LinkedIn</a>.
-    </p>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hello! I'm <span class="highlight">Mridula S</span></h1>
+      <p class="tagline">A Creative Technophile | Python & Web Dev Enthusiast</p>
+      <div class="buttons">
+        <a href="#contact" class="btn primary">Hire Me</a>
+        <a href="Mridula_Resume.pdf" class="btn secondary" download>Download Resume</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://github.com/Mridula007" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mridula-s-0a32562b0" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/mridhu_007/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <div class="project-card">
-      <h3>Responsive Blog Website</h3>
-      <p>A modern, colorful blog site with Google Forms integration, Google Sheets backend, and a working dark mode.</p>
-      <a href="https://mridula007.github.io/blog-layout/" target="_blank" class="project-btn">View Blog</a>
+  <section id="education" class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">BCA – Sona College of Arts and Science, Salem (2022–2025) – 84%</div>
+      <div class="timeline-item">12th – Sri Sarada Matric Hr. Sec. School – 87%</div>
+      <div class="timeline-item">10th – Sri Sarada Matric Hr. Sec. School – 85%</div>
     </div>
-
-    <div class="project-card">
-      <h3>My YouTube Channel</h3>
-      <p>Check out my videos on reviews, edits, tech tips, and digital content creation on my growing YouTube channel.</p>
-      <a href="https://www.youtube.com/@MS_edits_and_reviews" target="_blank" class="project-btn">Visit Channel</a>
-    </div>
-
-    <div class="project-card">
-      <h3>To-Do List Web App</h3>
-      <p>A simple and elegant to-do list web application built with HTML, CSS, and JavaScript. Helps users track their daily tasks efficiently.</p>
-      <a href="https://mridula007.github.io/to-do-web-app/" target="_blank" class="project-btn">Try It Now</a>
-    </div>
-
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Your Email" required/>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills-list">
+      <li><strong>Languages:</strong> C, C++, Python, HTML, CSS, JavaScript</li>
+      <li><strong>Tools:</strong> MS Excel, Canva</li>
+      <li><strong>Creative:</strong> Content Creation, Poem Writing, Dubbing</li>
+      <li><strong>Soft Skills:</strong> Communication, Adaptive Thinking, Creativity</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <ul class="project-list">
+      <li>✨ Blog Website</li>
+      <li>✅ To-Do List App</li>
+      <li>🌐 Personal Portfolio Site</li>
+      <li>📊 Text Sentiment Analyzer App</li>
+      <li>🔐 Cybercrime HR Volunteer Project</li>
+    </ul>
+    <a href="https://github.com/Mridula007" class="btn github" target="_blank">Explore GitHub</a>
+  </section>
+
+  <section id="services" class="section">
+    <h2 class="section-title">Services</h2>
+    <ul class="services-list">
+      <li>🌟 Freelance Website Development</li>
+      <li>⚙️ Python Scripting & Automations</li>
+      <li>🎨 Creative Digital Content Design</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:mridulasasikumar30@gmail.com">mridulasasikumar30@gmail.com</a></p>
+    <p>Phone: 9345988399</p>
+    <p>Location: Salem, Tamil Nadu, India</p>
   </section>
 
   <footer>
-    <p>© 2025 Mridula. All rights reserved.</p>
+    <p>&copy; 2025 <span class="highlight">Mridula S</span> | All Rights Reserved</p>
   </footer>
 
   <script src="script.js"></script>
