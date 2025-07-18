@@ -1,4 +1,4 @@
-/* === GLOBAL RESET & FONT === */
+/* === GLOBAL RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
   transition: background 0.4s, color 0.4s;
 }
 
-/* === COLOR VARIABLES === */
+/* === COLOR THEMES === */
 :root {
   --bg: #1e1b2e;
   --text: #fdf6fb;
@@ -35,7 +35,7 @@ h1, h2 {
   color: var(--highlight);
 }
 
-/* === NAVIGATION BAR === */
+/* === NAVBAR === */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -68,7 +68,7 @@ h1, h2 {
   color: var(--accent);
 }
 
-/* === TOGGLE BUTTON (TOP RIGHT) === */
+/* === TOGGLE BUTTON === */
 .toggle-btn {
   position: fixed;
   top: 1rem;
@@ -106,7 +106,7 @@ h1, h2 {
   margin-bottom: 1.5rem;
 }
 
-/* === BUTTON STYLES === */
+/* === BUTTONS === */
 .buttons {
   margin: 1.5rem 0;
 }
@@ -154,7 +154,7 @@ h1, h2 {
   transform: scale(1.2);
 }
 
-/* === SECTION LAYOUT === */
+/* === SECTIONS === */
 .section {
   padding: 3rem 2rem;
   max-width: 900px;
@@ -171,7 +171,7 @@ h1, h2 {
   color: var(--highlight);
 }
 
-/* === LISTS IN SECTIONS === */
+/* === LIST ITEMS === */
 .timeline-item,
 .skills-list li,
 .project-list li,
