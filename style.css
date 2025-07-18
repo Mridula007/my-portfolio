@@ -1,224 +1,175 @@
-/* === GLOBAL RESET === */
+/* ---------- General Reset & Base ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-  transition: background 0.4s, color 0.4s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-/* === COLOR THEMES === */
 :root {
-  --bg: #1e1b2e;
-  --text: #fdf6fb;
-  --accent: #ffc0cb;
-  --highlight: #add8e6;
+  --bg: #0f111a;
+  --text: #ffffff;
+  --primary: #7ad7f0;
+  --accent: #f6b5d8;
+  --hover: #ffe8f2;
 }
 
 body.light-mode {
-  --bg: #fff0f5;
-  --text: #1e1b2e;
-  --accent: #d81b60;
-  --highlight: #3f51b5;
+  --bg: #fefbff;
+  --text: #2b2b2b;
+  --primary: #7db6f4;
+  --accent: #f4aacb;
+  --hover: #f3f3f3;
 }
 
-/* === HEADINGS === */
-h1, h2 {
-  font-family: 'Ubuntu Mono', monospace;
-  color: var(--highlight);
+/* ---------- Layout ---------- */
+.section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-/* === NAVBAR === */
+.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+/* ---------- Navbar ---------- */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
+  padding: 16px 32px;
   background-color: var(--bg);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  border-bottom: 1px solid var(--accent);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: bold;
+  font-size: 20px;
   color: var(--accent);
 }
 
 .nav-links {
+  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
-.nav-links li a {
+.nav-links a {
+  text-decoration: none;
   color: var(--text);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 100px 20px 60px;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--bg), #1e1e2f);
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.tagline {
+  font-size: 18px;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: var(--accent);
+  font-size: 20px;
   transition: color 0.3s;
 }
 
-.nav-links li a:hover {
-  color: var(--accent);
+.social-icons a:hover {
+  color: var(--primary);
 }
 
-/* === TOGGLE BUTTON === */
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 10px;
+  transition: all 0.3s;
+}
+
+.btn.primary {
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--hover);
+  color: var(--bg);
+}
+
+/* ---------- Lists ---------- */
+.skills-list,
+.project-list,
+.services-list {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--text);
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+/* ---------- Toggle Button ---------- */
 .toggle-btn {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
   background: var(--accent);
   color: var(--bg);
   border: none;
   border-radius: 50%;
-  padding: 0.6rem 0.7rem;
-  font-size: 1rem;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  z-index: 1001;
   box-shadow: 0 0 10px var(--accent);
+  z-index: 2000;
 }
 
-/* === HERO SECTION === */
-.hero {
-  padding: 5rem 2rem;
+/* ---------- Footer ---------- */
+footer {
+  padding: 20px;
   text-align: center;
-  background: linear-gradient(to right, var(--bg), #3c2c5a);
-}
-
-.hero-content h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-content .highlight {
-  color: var(--accent);
-}
-
-.tagline {
-  font-size: 1.2rem;
-  color: #ddd;
-  margin-bottom: 1.5rem;
-}
-
-/* === BUTTONS === */
-.buttons {
-  margin: 1.5rem 0;
-}
-
-.btn {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.4s, transform 0.3s;
-}
-
-.primary {
-  background-color: var(--highlight);
-  color: var(--bg);
-}
-
-.secondary {
+  font-size: 14px;
   background-color: var(--bg);
   color: var(--text);
-  border: 1px solid var(--accent);
-}
-
-.primary:hover, .secondary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px var(--accent);
-}
-
-/* === SOCIAL ICONS === */
-.social-icons {
-  margin-top: 1rem;
-}
-
-.social-icons a {
-  margin: 0 0.5rem;
-  font-size: 1.4rem;
-  color: var(--accent);
-  transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-}
-
-/* === SECTIONS === */
-.section {
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: auto;
-  border-bottom: 1px solid #444;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: var(--highlight);
-}
-
-/* === LIST ITEMS === */
-.timeline-item,
-.skills-list li,
-.project-list li,
-.services-list li {
-  padding: 0.5rem 0;
-  font-size: 1rem;
-  border-left: 3px solid var(--accent);
-  padding-left: 1rem;
-  margin-bottom: 0.8rem;
-}
-
-/* === GITHUB BUTTON === */
-.github {
-  display: inline-block;
-  background-color: #24292e;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.github:hover {
-  background-color: #444;
-  box-shadow: 0 0 10px var(--accent);
-}
-
-/* === FOOTER === */
-footer {
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  background-color: #181426;
-  color: #aaa;
-}
-
-footer .highlight {
-  color: var(--accent);
-}
-
-/* === FADE-IN ANIMATION === */
-.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.fade-in {
-  opacity: 1 !important;
-  transform: translateY(0);
+  border-top: 1px solid var(--accent);
 }
