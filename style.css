@@ -1,178 +1,224 @@
-/* Global Styles */
+/* === GLOBAL RESET & FONT === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
-  margin: 0;
-  color: #333;
-  transition: background 0.5s ease, color 0.5s ease;
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: background 0.4s, color 0.4s;
 }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, #4e73df, #20c997);
-  color: #fff;
-  padding: 3rem 1rem;
-  text-align: center;
+/* === COLOR VARIABLES === */
+:root {
+  --bg: #1e1b2e;
+  --text: #fdf6fb;
+  --accent: #ffc0cb;
+  --highlight: #add8e6;
 }
 
-header h1 {
-  font-size: 3.2rem;
-  margin: 0;
+body.light-mode {
+  --bg: #fff0f5;
+  --text: #1e1b2e;
+  --accent: #d81b60;
+  --highlight: #3f51b5;
 }
 
-header p {
-  font-size: 1.3rem;
-  margin: 1rem 0;
+/* === HEADINGS === */
+h1, h2 {
+  font-family: 'Ubuntu Mono', monospace;
+  color: var(--highlight);
 }
 
-#darkToggle {
-  padding: 0.8rem 1.5rem;
+/* === NAVIGATION BAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: var(--bg);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent);
+}
+
+/* === TOGGLE BUTTON (TOP RIGHT) === */
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  color: var(--bg);
   border: none;
-  background: #ffc107;
-  color: #333;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 50%;
+  padding: 0.6rem 0.7rem;
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s ease;
+  z-index: 1001;
+  box-shadow: 0 0 10px var(--accent);
 }
 
-#darkToggle:hover {
-  background: #e83e8c;
-  color: #fff;
+/* === HERO SECTION === */
+.hero {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, var(--bg), #3c2c5a);
 }
 
-/* Sections */
-section {
-  padding: 3rem 1rem;
-  max-width: 1000px;
-  margin: auto;
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
 
-h2 {
-  font-size: 2.5rem;
-  color: #20c997;
+.hero-content .highlight {
+  color: var(--accent);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #ddd;
   margin-bottom: 1.5rem;
 }
 
-/* Project Cards */
-.project-card {
-  background: #fff;
-  border-left: 5px solid #4e73df;
+/* === BUTTON STYLES === */
+.buttons {
   margin: 1.5rem 0;
-  padding: 1.3rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
-.project-card h3 {
-  margin: 0 0 0.7rem 0;
-}
-
-.project-btn {
+.btn {
   display: inline-block;
-  padding: 0.8rem 1.4rem;
-  background: #20c997;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 0.9rem;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-.project-btn:hover {
-  background: #e83e8c;
-}
-
-/* Contact */
-#contact {
-  background: linear-gradient(135deg, #20c997, #4e73df);
-  color: #fff;
-  border-radius: 12px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-form input, form textarea {
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
   border: none;
-  border-radius: 7px;
-  font-size: 1.1rem;
-}
-
-form button {
-  padding: 1rem;
-  background: #ffc107;
-  border: none;
-  color: #333;
-  font-weight: bold;
-  border-radius: 7px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background 0.4s, transform 0.3s;
 }
 
-form button:hover {
-  background: #e83e8c;
-  color: #fff;
+.primary {
+  background-color: var(--highlight);
+  color: var(--bg);
 }
 
-/* Footer */
-footer {
-  background: #333;
-  color: #fff;
+.secondary {
+  background-color: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--accent);
+}
+
+.primary:hover, .secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+/* === SOCIAL ICONS === */
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  color: var(--accent);
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* === SECTION LAYOUT === */
+.section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  border-bottom: 1px solid #444;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
-  animation-delay: 1s;
+  color: var(--highlight);
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+/* === LISTS IN SECTIONS === */
+.timeline-item,
+.skills-list li,
+.project-list li,
+.services-list li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin-bottom: 0.8rem;
 }
 
-/* Dark Mode */
-body.dark {
-  background: #111;
+/* === GITHUB BUTTON === */
+.github {
+  display: inline-block;
+  background-color: #24292e;
   color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-body.dark header {
-  background: linear-gradient(135deg, #111, #333);
+.github:hover {
+  background-color: #444;
+  box-shadow: 0 0 10px var(--accent);
 }
 
-body.dark section {
-  background: #222;
+/* === FOOTER === */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #181426;
+  color: #aaa;
 }
 
-body.dark .project-card {
-  background: #333;
-  border-color: #ffc107;
-  color: #eee;
+footer .highlight {
+  color: var(--accent);
 }
 
-body.dark #contact {
-  background: linear-gradient(135deg, #333, #555);
+/* === FADE-IN ANIMATION === */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-body.dark form input, 
-body.dark form textarea {
-  background: #555;
-  color: #eee;
-}
-
-body.dark form button {
-  background: #ffc107;
-  color: #333;
-}
-
-body.dark footer {
-  background: #111;
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0);
 }
