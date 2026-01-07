@@ -1,5 +1,19 @@
+function toggleMode() {
+  document.body.classList.toggle("light");
+  localStorage.setItem("theme",
+    document.body.classList.contains("light") ? "light" : "dark"
+  );
+  updateIcon();
+}
 
-// Toggle dark/light mode function toggleMode() { document.body.classList.toggle("light-mode"); const toggleBtn = document.querySelector(".toggle-btn"); toggleBtn.textContent = document.body.classList.contains("light-mode") ? "🌞" : "🌙"; }
+function updateIcon() {
+  document.querySelector(".toggle-btn").textContent =
+    document.body.classList.contains("light") ? "🌞" : "🌙";
+}
 
-// On load, set default toggle icon window.onload = () => { const toggleBtn = document.querySelector(".toggle-btn"); toggleBtn.textContent = document.body.classList.contains("light-mode") ? "🌞" : "🌙"; };
-
+window.onload = () => {
+  if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light");
+  }
+  updateIcon();
+};
