@@ -46,15 +46,59 @@ body {
 }
 
 .hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 90px 20px;
+  padding: 40px 20px;
 }
 
-.highlight { color: var(--primary); }
+.hero-container {
+  max-width: 900px;
+}
 
-.section {
-  padding: 60px 20px;
-  text-align: center;
+.hero h1 {
+  font-size: 46px;
+  margin-bottom: 12px;
+}
+
+.tagline {
+  font-size: 20px;
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.intro {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  color: var(--text);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 22px;
+}
+
+.social-icons a {
+  color: var(--accent);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
 }
 
 .section-title {
