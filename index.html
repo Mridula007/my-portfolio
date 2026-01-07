@@ -1,118 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mridula S | Portfolio</title>
+  <title>Mridula S | Python Developer & Web Enthusiast</title>
+  <meta name="description" content="Mridula S – Final-year BCA student, Python developer, web and AI enthusiast. Portfolio showcasing projects, skills, certifications, and experience." />
+  <meta name="keywords" content="Mridula S, Python Developer, Web Developer, BCA Student, Portfolio, AI, Data Analytics" />
+  <meta name="author" content="Mridula S" />
 
-  <!-- Stylesheet -->
+  <!-- Open Graph (LinkedIn / WhatsApp preview) -->
+  <meta property="og:title" content="Mridula S | Portfolio" />
+  <meta property="og:description" content="Python Developer | Web & AI Enthusiast | Final-year BCA Student" />
+  <meta property="og:type" content="website" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Raleway:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- Toggle Button -->
-  <button class="toggle-btn" onclick="toggleMode()">🌙</button>
 
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Mridula S</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Dark/Light Toggle -->
+<button class="toggle-btn" onclick="toggleMode()" aria-label="Toggle dark mode">🌙</button>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Hello! I'm <span class="highlight">Mridula S</span></h1>
-      <p class="tagline">A Creative Technophile | Python & Web Dev Enthusiast</p>
-      <a href="#contact" class="btn primary">Hire Me</a>
-      <div class="social-icons">
-        <a href="https://github.com/Mridula007" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/mridula-s-0a32562b0" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com/mridhu_007" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@ms_edits_and_reviews?si=7j4It296bsZeloxy" target="_blank"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="section">
-    <h2 class="section-title">Education</h2>
-    <div class="timeline-item">BCA – Sona College of Arts and Science, Salem (2023–2026) – 84%</div>
-    <div class="timeline-item">12th – Sri Sarada Matric Hr. Sec. School – 87%</div>
-    <div class="timeline-item">10th – Sri Sarada Matric Hr. Sec. School – 85%</div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <h2 class="section-title">Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Languages:</strong> C, C++, Python, HTML, CSS, JavaScript</li>
-      <li><strong>Tools:</strong> MS Excel, Canva, MS Office</li>
-      <li><strong>Creative:</strong> Content Creation, Poem Writing, Dubbing</li>
-      <li><strong>Soft Skills:</strong> Communication, Adaptive Thinking, Creativity</li>
+<!-- Navbar -->
+<header>
+  <nav class="navbar">
+    <div class="logo">Mridula S</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section>
+  </nav>
+</header>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Projects</h2>
-    <ul class="project-list">
-      <li>✨ Blog Website</li>
-      <li>✅ To-Do List App</li>
-      <li>🌐 Personal Portfolio Site</li>
-      <li>📊 Text Sentiment Analyzer</li>
-      <li>🔐 Cybercrime HR Volunteer Project – Namakkal</li>
-    </ul>
-    <a href="https://github.com/Mridula007" class="github" target="_blank">Explore GitHub</a>
-  </section>
+<!-- Hero -->
+<section id="home" class="hero">
+  <h1>Hello, I'm <span class="highlight">Mridula S</span></h1>
+  <p class="tagline">Python Developer | Web & AI Enthusiast</p>
 
-  <!-- Services -->
-  <section id="services" class="section">
-    <h2 class="section-title">Services</h2>
-    <ul class="services-list">
-      <li>🌟 Freelance Website Development</li>
-      <li>⚙️ Python Scripting & Automations</li>
-      <li>🎨 Creative Digital Content Design</li>
-    </ul>
-  </section>
+  <p class="intro">
+    Final-year BCA student passionate about building intelligent, user-centric
+    applications using Python, modern web technologies, and data analytics.
+  </p>
 
-  <!-- Certifications -->
-  <section id="certifications" class="section">
-    <h2 class="section-title">Certifications</h2>
-    <ul class="skills-list">
-      <li>✅ Fullstack 30 Days Masterclass</li>
-      <li>🔍 SEO Foundations</li>
-      <li>👩‍💻 OOPs Using Python</li>
-      <li>📈 OpenAI’s Data Analysis Insights</li>
-    </ul>
-  </section>
+  <div class="hero-buttons">
+    <a href="#contact" class="btn primary">Hire Me</a>
+    <a href="Mridula_S_Resume.pdf" class="btn" download>Download Resume</a>
+  </div>
 
-  <section id="contact" class="section">
+  <div class="social-icons">
+    <a href="https://github.com/Mridula007" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/mridula-s-0a32562b0" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://instagram.com/mridhu_007" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/@ms_edits_and_reviews" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section">
+  <h2 class="section-title">Education</h2>
+  <ul class="list">
+    <li><strong>BCA</strong> – Sona College of Arts and Science (2023–2026) | 84%</li>
+    <li><strong>12th</strong> – Sri Sarada Matric Hr. Sec. School | 87%</li>
+    <li><strong>10th</strong> – Sri Sarada Matric Hr. Sec. School | 85%</li>
+  </ul>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="section">
+  <h2 class="section-title">Experience</h2>
+  <ul class="list">
+    <li><strong>Python with AI Intern</strong> – ATS, Coimbatore<br>Text Sentiment Analyzer using Python</li>
+    <li><strong>Data Analytics Intern</strong> – Besant Technologies<br>Dashboard & Data Analysis</li>
+    <li><strong>Assistant Analyst</strong> – T.A.S.C (Present)<br>Threat & Security Analysis</li>
+  </ul>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <h2 class="section-title">Skills</h2>
+  <ul class="list">
+    <li><strong>Programming:</strong> C, C++, Python, JavaScript</li>
+    <li><strong>Web:</strong> HTML, CSS, Bootstrap, Angular</li>
+    <li><strong>Frameworks:</strong> Django, Flask, React (Basics)</li>
+    <li><strong>Tools:</strong> Power BI, MS Excel, Canva</li>
+    <li><strong>Soft Skills:</strong> Communication, Analysis, Creativity</li>
+  </ul>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <h2 class="section-title">Projects</h2>
+  <ul class="list">
+    <li>🌐 Portfolio Website</li>
+    <li>📝 Blog Website</li>
+    <li>📊 Sales Dashboard – Power BI</li>
+    <li>🔍 Text Sentiment Analyzer – Python, Django</li>
+    <li>🔐 Cyber Awareness Website – React</li>
+    <li>🧠 TalentWall – Flask & MySQL</li>
+  </ul>
+
+  <a href="https://github.com/Mridula007" target="_blank" class="btn">View GitHub</a>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="section">
+  <h2 class="section-title">Certifications</h2>
+  <ul class="list">
+    <li>Full-Stack Masterclass</li>
+    <li>OOPs using Python</li>
+    <li>Data Analytics & Power BI</li>
+    <li>Cyber Security – IBM</li>
+    <li>UX Design & Angular – Infosys</li>
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
   <h2 class="section-title">Contact</h2>
-  <p>You can reach me through LinkedIn, GitHub or email.</p>
   <p>Email: <a href="mailto:mridulasasikumar30@gmail.com">mridulasasikumar30@gmail.com</a></p>
 </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>Made with 💖 by <span class="highlight">Mridula S</span></p>
-  </footer>
+<footer>
+  <p>© 2026 Mridula S | Built with ❤️</p>
+</footer>
 
-  <!-- JS File -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
